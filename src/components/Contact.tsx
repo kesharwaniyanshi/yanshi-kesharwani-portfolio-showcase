@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                     className="flex items-center text-slate hover:text-teal transition-colors"
                   >
                     <Linkedin className="mr-3" size={20} />
-                    linkedin.com/in/yanshi-kesharwani-57412624b
+                    linkedin.com/in/yanshi-kesharwani
                   </a>
                   
                   <a 
