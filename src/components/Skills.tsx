@@ -22,11 +22,23 @@ const Skills: React.FC = () => {
     },
     {
       title: "Operating Systems",
-      skills: ["Windows", "Linux", "Ubuntu", "MacOS"]
+      skills: ["Windows", "Linux", "Ubuntu"]
     },
     {
       title: "Coursework",
-      skills: ["Data Structures & Algorithms", "Object-Oriented Programming", "Database Management Systems", "Operating Systems", "Computer Networks", "Software Engineering", "Web Development"]
+skills: [
+  "Data Structures & Algorithms",
+  "Object-Oriented Programming",
+  "Database Management Systems",
+  "Operating Systems",
+  "Computer Networks",
+  "Software Engineering",
+  "Web Development",
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Cloud Computing",
+  "Engineering Mathematics"
+]
     }
   ];
 
