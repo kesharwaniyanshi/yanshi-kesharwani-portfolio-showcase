@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a 
-              href="/resume.pdf" 
+              href="../../yanshi_kesharwani.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn inline-block text-center mt-3"
