@@ -19,6 +19,14 @@ const Skills: React.FC = () => {
     {
       title: "Skills & Interests",
       skills: ["Data Structures", "Algorithms", "API Integration", "Full-Stack Web Development", "Web Development", "Competitive Programming", "Open Source Contributions"]
+    },
+    {
+      title: "Operating Systems",
+      skills: ["Windows", "Linux", "Ubuntu", "MacOS"]
+    },
+    {
+      title: "Coursework",
+      skills: ["Data Structures & Algorithms", "Object-Oriented Programming", "Database Management Systems", "Operating Systems", "Computer Networks", "Software Engineering", "Web Development"]
     }
   ];
 

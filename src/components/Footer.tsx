@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/in/kesharwaniyanshi" 
+              href="https://www.linkedin.com/in/yanshi-kesharwani-57412624b/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"

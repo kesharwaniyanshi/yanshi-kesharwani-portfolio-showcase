@@ -121,23 +121,23 @@ const Contact: React.FC = () => {
                   </a>
                   
                   <a 
-                    href="https://linkedin.com/in/kesharwaniyanshi"
+                    href="https://www.linkedin.com/in/yanshi-kesharwani-57412624b/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-slate hover:text-teal transition-colors"
                   >
                     <Linkedin className="mr-3" size={20} />
-                    linkedin.com/in/kesharwaniyanshi
+                    linkedin.com/in/yanshi-kesharwani-57412624b
                   </a>
                   
                   <a 
-                    href="https://leetcode.com/u/yanshi-yk"
+                    href="https://leetcode.com/u/yanshi_yk"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-slate hover:text-teal transition-colors"
                   >
                     <Code className="mr-3" size={20} />
-                    leetcode.com/u/yanshi-yk
+                    leetcode.com/u/yanshi_yk
                   </a>
                 </div>
               </div>
@@ -148,8 +148,8 @@ const Contact: React.FC = () => {
                   Pune, Maharashtra, India
                 </p>
                 <p className="text-slate mt-2">
-                  <a href="tel:+919392597598" className="hover:text-teal transition-colors">
-                    +91 9392597598
+                  <a href="tel:+916392597598" className="hover:text-teal transition-colors">
+                    +91 6392597598
                   </a>
                 </p>
               </div>

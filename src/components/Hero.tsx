@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://linkedin.com/in/kesharwaniyanshi" 
+              href="https://www.linkedin.com/in/yanshi-kesharwani-57412624b/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"
