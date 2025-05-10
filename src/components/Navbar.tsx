@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
           </nav>
-          <a href="/yanshi_kesharwani.pdf" target="_blank" rel="noopener noreferrer" className="ml-5">
+          <a href="/yanshi_k.pdf" target="_blank" rel="noopener noreferrer" className="ml-5">
             <Button variant="outline" className="border-teal text-teal hover:bg-teal/10">Resume</Button>
           </a>
         </div>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
            <a
-  href="/yanshi_kesharwani.pdf"
+  href="/yanshi_k.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="btn inline-block text-center mt-3"
