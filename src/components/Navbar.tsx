@@ -79,15 +79,16 @@ const Navbar: React.FC = () => {
                 {item.label}
               </a>
             ))}
-            <a 
-              href="../../yanshi_kesharwani.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn inline-block text-center mt-3"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Resume
-            </a>
+           <a
+  href="/yanshi_kesharwani.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn inline-block text-center mt-3"
+  onClick={() => setMobileMenuOpen(false)}
+>
+  Resume
+</a>
+
           </nav>
         </div>
       )}
