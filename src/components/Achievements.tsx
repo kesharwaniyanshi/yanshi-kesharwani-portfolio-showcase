@@ -25,32 +25,32 @@ const Achievements: React.FC = () => {
   const achievements = [
     {
       title: "Smart India Hackathon 2024",
-      description: "Finalist in India's biggest hackathon, developed an innovative solution addressing real-world challenges.",
+      description: "Winner of the Smart India Hackathon 2024, selected as a finalist from 100+ teams. Worked in a team to develop a software solution, contributing to development, task planning, and integration.",
       icon: <Trophy size={24} />
     },
     {
-      title: "GSSoC Contributor",
-      description: "Active contributor to multiple open-source projects during Girl Script Summer of Code program.",
+      title: "GSSoC 2024 Contributor",
+      description: "Contributed to open-source projects during GSSoC 2024 with 9 successfully merged pull requests.",
       icon: <Code size={24} />
     },
     {
-      title: "LeetCode Master",
-      description: "Solved 500+ problems across various difficulty levels, demonstrating strong algorithmic skills.",
-      icon: <Award size={24} />
-    },
-    {
       title: "Competitive Programming",
-      description: "Achieved high rankings on platforms like Codeforces, demonstrating strong problem-solving abilities.",
+      description: "Solved over 500+ DSA questions on platforms including LeetCode (Highest Rating: 1667), Codeforces (Highest Rating: 1102), and CodeChef (Highest Rating: 1604).",
       icon: <Award size={24} />
     },
     {
-      title: "Unstop & OptiGo Hackathons",
-      description: "Winner in multiple hackathons, showcasing innovation and technical excellence.",
+      title: "OptiGo Inter-IIIT Contest",
+      description: "Achieved 35th rank in the OptiGo Inter-IIIT coding contest out of 250 participants.",
+      icon: <Trophy size={24} />
+    },
+    {
+      title: "Unstop Talent Park Tech",
+      description: "Ranked among the top 230 out of 68,000 participants in the Unstop Talent Park Tech competition.",
       icon: <Trophy size={24} />
     },
     {
       title: "Myntra Hackerramp",
-      description: "Finalist in Myntra's prestigious hackathon, developed a fashion-tech solution.",
+      description: "Qualified for the Implementation Phase of the Myntra Hackerramp We-for-She Hackathon, selected among 30,000 participants and placed in the top 1,200 teams.",
       icon: <Trophy size={24} />
     }
   ];

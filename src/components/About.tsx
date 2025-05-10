@@ -23,8 +23,9 @@ const About: React.FC = () => {
             </p>
             
             <p className="text-slate mb-4">
-              I'm constantly learning and exploring new technologies to enhance my skills. When I'm not coding, you might 
-              find me participating in hackathons, contributing to open-source projects, or solving problems on coding platforms.
+              I'm currently pursuing my Bachelor of Technology in Computer Science and Engineering at the Indian Institute of 
+              Information Technology, Pune (November 2022 - June 2026). Before that, I completed my Higher Secondary education 
+              at Gorakhpur Public School with 93.8%.
             </p>
             
             <p className="text-slate">

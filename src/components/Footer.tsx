@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center">
           <div className="flex space-x-6 mb-6">
             <a 
-              href="https://github.com/yanshikesharwani" 
+              href="https://github.com/kesharwaniyanshi" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/in/yanshikesharwani" 
+              href="https://linkedin.com/in/kesharwaniyanshi" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"
@@ -27,14 +27,14 @@ const Footer: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="mailto:yanshi.kesharwani@gmail.com" 
+              href="mailto:kesharwaniyanshi@gmail.com" 
               className="social-icon"
               aria-label="Email"
             >
               <Mail size={20} />
             </a>
             <a 
-              href="https://leetcode.com/yanshikesharwani" 
+              href="https://leetcode.com/u/yanshi-yk" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"

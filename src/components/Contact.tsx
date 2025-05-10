@@ -103,41 +103,41 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-4">Connect With Me</h3>
                 <div className="space-y-4">
                   <a 
-                    href="mailto:yanshi.kesharwani@gmail.com"
+                    href="mailto:kesharwaniyanshi@gmail.com"
                     className="flex items-center text-slate hover:text-teal transition-colors"
                   >
                     <Mail className="mr-3" size={20} />
-                    yanshi.kesharwani@gmail.com
+                    kesharwaniyanshi@gmail.com
                   </a>
                   
                   <a 
-                    href="https://github.com/yanshikesharwani"
+                    href="https://github.com/kesharwaniyanshi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-slate hover:text-teal transition-colors"
                   >
                     <Github className="mr-3" size={20} />
-                    github.com/yanshikesharwani
+                    github.com/kesharwaniyanshi
                   </a>
                   
                   <a 
-                    href="https://linkedin.com/in/yanshikesharwani"
+                    href="https://linkedin.com/in/kesharwaniyanshi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-slate hover:text-teal transition-colors"
                   >
                     <Linkedin className="mr-3" size={20} />
-                    linkedin.com/in/yanshikesharwani
+                    linkedin.com/in/kesharwaniyanshi
                   </a>
                   
                   <a 
-                    href="https://leetcode.com/yanshikesharwani"
+                    href="https://leetcode.com/u/yanshi-yk"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-slate hover:text-teal transition-colors"
                   >
                     <Code className="mr-3" size={20} />
-                    leetcode.com/yanshikesharwani
+                    leetcode.com/u/yanshi-yk
                   </a>
                 </div>
               </div>
@@ -146,6 +146,11 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-4">Location</h3>
                 <p className="text-slate">
                   Pune, Maharashtra, India
+                </p>
+                <p className="text-slate mt-2">
+                  <a href="tel:+919392597598" className="hover:text-teal transition-colors">
+                    +91 9392597598
+                  </a>
                 </p>
               </div>
             </div>

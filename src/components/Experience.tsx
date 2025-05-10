@@ -5,15 +5,14 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const experience = {
-    title: "Events Team Lead",
+    title: "Event Management Associate, Digital Marketing Associate, Social Media Assistant",
     company: "E-Cell, IIIT Pune",
-    duration: "September 2023 - Present",
+    duration: "March 2023 - Present",
+    location: "Pune, Maharashtra",
     responsibilities: [
-      "Led event management for entrepreneurship workshops and startup competitions",
-      "Implemented digital marketing strategies resulting in 40% increase in event participation",
-      "Managed social media content resulting in 30% growth in follower engagement",
-      "Coordinated with external speakers and partners for collaborative initiatives",
-      "Organized networking sessions connecting students with industry professionals"
+      "Managed event planning, on-site activities, and post-event evaluations to enhance future events.",
+      "Adapted to algorithm changes, driving 15% growth in social media engagement by refining content strategies.",
+      "Designed Instagram posts, optimizing content to boost engagement for E-Cell initiatives."
     ]
   };
 
@@ -33,6 +32,8 @@ const Experience: React.FC = () => {
               <span className="text-sm">{experience.duration}</span>
             </div>
           </div>
+          
+          <p className="text-slate-light mb-4 text-sm">{experience.location}</p>
           
           <ul className="space-y-3 mt-4">
             {experience.responsibilities.map((responsibility, index) => (

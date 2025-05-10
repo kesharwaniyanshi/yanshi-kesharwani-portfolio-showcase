@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Code } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <a 
-              href="https://github.com/yanshikesharwani" 
+              href="https://github.com/kesharwaniyanshi" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://linkedin.com/in/yanshikesharwani" 
+              href="https://linkedin.com/in/kesharwaniyanshi" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"
@@ -70,11 +70,20 @@ const Hero: React.FC = () => {
               <Linkedin size={24} />
             </a>
             <a 
-              href="mailto:yanshi.kesharwani@gmail.com" 
+              href="mailto:kesharwaniyanshi@gmail.com" 
               className="social-icon"
               aria-label="Email"
             >
               <Mail size={24} />
+            </a>
+            <a 
+              href="https://leetcode.com/u/yanshi-yk" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="social-icon"
+              aria-label="Leetcode"
+            >
+              <Code size={24} />
             </a>
           </motion.div>
           
