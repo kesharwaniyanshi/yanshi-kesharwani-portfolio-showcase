@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               <Mail size={20} />
             </a>
             <a 
-              href="https://leetcode.com/u/yanshi-yk" 
+              href="https://leetcode.com/u/yanshi_yk" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"

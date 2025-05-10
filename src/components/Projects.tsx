@@ -117,7 +117,7 @@ const Projects: React.FC = () => {
       ],
       technologies: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB"],
       githubUrl: "https://github.com/kesharwaniyanshi/fusioncart",
-      demoUrl: "https://fusioncart-demo.vercel.app",
+      demoUrl: "https://fusion-cart-frontend.vercel.app/",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       timeline: "September 2024 - November 2024"
     },
@@ -131,7 +131,7 @@ const Projects: React.FC = () => {
       ],
       technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"],
       githubUrl: "https://github.com/kesharwaniyanshi/getaway",
-      demoUrl: "https://getaway-hotel.vercel.app",
+      demoUrl: "https://hotel-booking-site-frontend.vercel.app/",
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
       timeline: "April 2024 - June 2024",
       reverse: true,

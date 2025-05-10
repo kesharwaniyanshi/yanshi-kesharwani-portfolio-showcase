@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Computer Science Undergraduate.
+            Aspiring Software Engineer.
           </motion.h2>
           
           <motion.p 
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
               <Mail size={24} />
             </a>
             <a 
-              href="https://leetcode.com/u/yanshi-yk" 
+              href="https://leetcode.com/u/yanshi_yk" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="social-icon"
