@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            I'm a passionate <span className="highlight">web developer</span> and <span className="highlight">competitive programmer</span> 
+            I'm a passionate <span className="highlight">web developer</span> and <span className="highlight">competitive programmer </span> 
             with a keen interest in building exceptional digital experiences and solving complex problems.
           </motion.p>
           
