@@ -1,4 +1,4 @@
-// ProjectCard.tsx (or wherever this file resides)
+// ProjectCard.tsx
 import React, { useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import SectionHeading from './SectionHeading';
@@ -32,34 +32,38 @@ const ProjectCard: React.FC<ProjectProps> = ({
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <div ref={ref} className={`relative md:grid md:grid-cols-12 gap-4 mb-20 items-center`}>
-      <motion.div 
-        className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'} h-full`}
-        initial={{ opacity: 0, x: reverse ? -30 : 30 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: reverse ? -30 : 30 }}
-        transition={{ duration: 0.6, delay: 0.2 }}>
-        <a 
-          href={demoUrl} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="group relative block w-full h-full overflow-hidden rounded-lg"
+    <div ref={ref} className="relative mb-20">
+      <div className="flex flex-col md:flex-row">
+        {/* Project Image */}
+        <motion.div 
+          className={`w-full md:w-2/3 h-auto ${reverse ? 'md:order-2' : 'md:order-1'}`}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="absolute inset-0 bg-navy-dark/80 group-hover:bg-navy-dark/30 transition-all duration-300 z-10"></div>
-          <img 
-            src={imageUrl} 
-            alt={title}
-            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </a>
-      </motion.div>
+          <a 
+            href={demoUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="group relative block w-full h-auto overflow-hidden rounded-lg"
+          >
+            <div className="absolute inset-0 bg-navy-dark/80 group-hover:bg-navy-dark/30 transition-all duration-300 z-10"></div>
+            <img 
+              src={imageUrl} 
+              alt={title}
+              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </a>
+        </motion.div>
 
-      <motion.div 
-        className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 h-full flex items-center`}
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="bg-navy-light p-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
+        {/* Project Info Card */}
+        <motion.div 
+          className={`w-4/5 md:w-1/2 bg-navy-light p-6 rounded-lg shadow-lg 
+                    md:absolute ${reverse ? 'md:left-0' : 'md:right-0'} md:top-1/2 md:transform md:-translate-y-1/2 z-20`}
+          initial={{ opacity: 0, x: reverse ? -30 : 30 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: reverse ? -30 : 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <div className="flex justify-between items-center mb-2">
             <p className="text-slate-light text-sm font-mono">{timeline}</p>
           </div>
@@ -109,8 +113,8 @@ const ProjectCard: React.FC<ProjectProps> = ({
               <ExternalLink size={20} />
             </a>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
@@ -169,14 +173,6 @@ const Projects: React.FC = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.3 }
-    }
-  };
-
   return (
     <section id="projects" className="section" ref={sectionRef}>
       <div className="container mx-auto px-4">
@@ -186,7 +182,13 @@ const Projects: React.FC = () => {
           className="space-y-24"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          variants={containerVariants}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.3 }
+            }
+          }}
         >
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
