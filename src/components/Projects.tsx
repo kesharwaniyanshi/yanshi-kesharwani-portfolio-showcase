@@ -70,7 +70,9 @@ const ProjectCard: React.FC<ProjectProps> = ({
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6 }}
       >
-        <div className={`bg-navy-light p-6 rounded-lg shadow-lg ${reverse ? 'md:float-right md:max-w-md' : 'md:max-w-md'}`}>
+{/*         <div className={`bg-navy-light p-6 rounded-lg shadow-lg ${reverse ? 'md:float-right md:max-w-md' : 'md:max-w-md'}`}> */}
+        <div className="bg-navy-light p-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
+
           <div className="flex justify-between items-center mb-2">
             <p className="text-teal font-mono text-sm">Featured Project</p>
             <p className="text-slate-light text-sm font-mono">{timeline}</p>
