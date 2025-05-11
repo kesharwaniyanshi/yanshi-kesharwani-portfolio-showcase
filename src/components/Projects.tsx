@@ -60,7 +60,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </div>
 
         {/* Project Content */}
-        <div className={`md:col-span-6 ${reverse ? 'md:col-start-1 md:row-start-1' : 'md:col-start-7 md:row-start-1'} mt-6 md:mt-0`}>
+        <div className={`md:col-span-6 ${reverse ? 'md:col-start-1 md:row-start-1' : 'md:col-start-7 md:row-start-1'} mt-6 md:mt-0 z-10`}>
           <div className="bg-navy-light p-5 rounded-lg shadow-lg">
             <div className="flex justify-end mb-2">
               <p className="text-slate-light text-sm font-mono">{timeline}</p>
