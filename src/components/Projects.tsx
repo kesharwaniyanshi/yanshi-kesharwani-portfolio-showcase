@@ -32,10 +32,15 @@ const ProjectCard: React.FC<ProjectProps> = ({
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   
   return (
+    // <div 
+    //   ref={ref}
+    //   className={`relative md:grid md:grid-cols-12 gap-4 mb-20 ${reverse ? '' : ''}`}
+    // >
     <div 
-      ref={ref}
-      className={`relative md:grid md:grid-cols-12 gap-4 mb-20 ${reverse ? '' : ''}`}
-    >
+  ref={ref}
+  className={`relative md:grid md:grid-cols-12 gap-4 mb-20 items-center`}
+>
+
       {/* Project Image */}
       <motion.div 
         className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'}`}
