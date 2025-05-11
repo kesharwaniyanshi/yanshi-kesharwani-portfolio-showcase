@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
     >
       <div className={`md:grid md:grid-cols-12 items-center gap-6`}>
         {/* Project Image */}
-        <div className={`md:col-span-7 ${reverse ? 'md:col-start-6 md:row-start-1' : 'md:col-start-1'}`}>
+        <div className={`md:col-span-7 ${reverse ? 'md:col-start-6 md:row-start-1' : 'md:col-start-1 md:row-start-1'}`}>
           <a 
             href={demoUrl} 
             target="_blank" 
