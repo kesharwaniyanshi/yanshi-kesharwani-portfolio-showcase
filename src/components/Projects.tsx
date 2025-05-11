@@ -139,8 +139,8 @@ const Projects: React.FC = () => {
         "Multi-Mode Transport Support: Route planning using rail, road, and air."
       ],
       technologies: ["Next.js", "TailwindCSS", "PostgreSQL", "A* Algorithm", "RESTful APIs"],
-      githubUrl: "https://github.com/kesharwaniyanshi/travelling-postman",
-      demoUrl: "https://travelling-postman.vercel.app/",
+      githubUrl: "https://github.com/Rizvi-Faiz/Travelling-Postman",
+      demoUrl: "https://travelling-postman-3hl4.vercel.app/landing%20page/index.html",
       imageUrl: "/lovable-uploads/59e0b4c6-0a92-4933-a691-6ccad505c874.png",
       timeline: "March 2024 - May 2024",
       reverse: false
