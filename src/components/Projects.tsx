@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import { Button } from '@/components/ui/button';
+import { motion, useInView } from 'framer-motion';
 
 interface ProjectProps {
   title: string;
@@ -27,10 +28,21 @@ const ProjectCard: React.FC<ProjectProps> = ({
   timeline,
   reverse = false
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  
   return (
-    <div className={`relative md:grid md:grid-cols-12 gap-4 mb-20 ${reverse ? '' : ''}`}>
+    <div 
+      ref={ref}
+      className={`relative md:grid md:grid-cols-12 gap-4 mb-20 ${reverse ? '' : ''}`}
+    >
       {/* Project Image */}
-      <div className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'}`}>
+      <motion.div 
+        className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'}`}
+        initial={{ opacity: 0, x: reverse ? -30 : 30 }}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: reverse ? -30 : 30 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <a 
           href={demoUrl} 
           target="_blank" 
@@ -44,10 +56,15 @@ const ProjectCard: React.FC<ProjectProps> = ({
             className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </a>
-      </div>
+      </motion.div>
       
       {/* Project Info */}
-      <div className={`col-span-6 ${reverse ? 'md:col-start-1 md:text-right' : 'md:col-start-7'} z-20`}>
+      <motion.div 
+        className={`col-span-6 ${reverse ? 'md:col-start-1 md:text-right' : 'md:col-start-7'} z-20`}
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="bg-navy-light p-6 rounded-lg shadow-lg md:absolute md:top-1/2 md:-translate-y-1/2">
           <div className="flex justify-between items-center mb-2">
             <p className="text-teal font-mono text-sm">Featured Project</p>
@@ -100,13 +117,32 @@ const ProjectCard: React.FC<ProjectProps> = ({
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
 const Projects: React.FC = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  
   const projects = [
+    {
+      title: "Travelling Postman",
+      description: "Smart India Hackathon 2024 Winning Solution",
+      details: [
+        "Built the seamless frontend using Next.js for India Post's dynamic mail transmission system.",
+        "Designed to calculate safety indexes for 700+ cities and optimize routes using real-time data.",
+        "Optimized Routing: A* algorithm enhanced with real-world factors like festivals, climate, and history, reducing delivery time by 30%.",
+        "Real-Time Node Safety Assessment: Live safety checks using news, weather, and social media.",
+        "Multi-Mode Transport Support: Route planning using rail, road, and air."
+      ],
+      technologies: ["Next.js", "TailwindCSS", "PostgreSQL", "A* Algorithm", "RESTful APIs"],
+      githubUrl: "https://github.com/kesharwaniyanshi/travelling-postman",
+      demoUrl: "https://travelling-postman.vercel.app/",
+      imageUrl: "https://images.unsplash.com/photo-1526406915894-7bcd65f60845",
+      timeline: "March 2024 - May 2024"
+    },
     {
       title: "FusionCart",
       description: "Web Application Connecting Online and In-Store Shopping",
@@ -119,7 +155,8 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/kesharwaniyanshi/fusioncart",
       demoUrl: "https://fusion-cart-frontend.vercel.app/",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      timeline: "September 2024 - November 2024"
+      timeline: "September 2024 - November 2024",
+      reverse: true
     },
     {
       title: "GetAWay",
@@ -133,26 +170,46 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/kesharwaniyanshi/getaway",
       demoUrl: "https://hotel-booking-site-frontend.vercel.app/",
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      timeline: "April 2024 - June 2024",
-      reverse: true,
+      timeline: "April 2024 - June 2024"
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <SectionHeading title="Projects" />
         
-        <div className="space-y-24">
+        <motion.div 
+          className="space-y-24"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
           {projects.map((project, index) => (
             <ProjectCard 
               key={project.title} 
               {...project}
+              reverse={index % 2 !== 0}
             />
           ))}
-        </div>
+        </motion.div>
         
-        <div className="text-center mt-16">
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+        >
           <p className="text-slate mb-6">Interested in more of my projects?</p>
           <a 
             href="https://github.com/kesharwaniyanshi" 
@@ -165,7 +222,7 @@ const Projects: React.FC = () => {
               <Github className="ml-2 h-4 w-4" />
             </Button>
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
