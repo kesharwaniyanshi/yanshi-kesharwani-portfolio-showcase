@@ -66,16 +66,17 @@ const ProjectCard: React.FC<ProjectProps> = ({
         </a>
       </motion.div>
       
-      {/* Project Info - Make consistent for all projects including FusionCart */}
-      // <motion.div 
-      //   className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 text-left`}
-  <motion.div 
-  className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 h-full flex items-center`}
+     {/* Project Info - Make consistent for all projects including FusionCart */}
+// Old version:
+// <motion.div className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 text-left`}>
 
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.6 }}
-      >
+<motion.div 
+  className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 h-full flex items-center`}
+  initial={{ opacity: 0, y: 30 }}
+  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+  transition={{ duration: 0.6 }}
+>
+
 {/*         <div className={`bg-navy-light p-6 rounded-lg shadow-lg ${reverse ? 'md:float-right md:max-w-md' : 'md:max-w-md'}`}> */}
         <div className="bg-navy-light p-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
 
