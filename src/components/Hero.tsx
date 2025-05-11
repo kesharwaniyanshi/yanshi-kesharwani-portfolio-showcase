@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Github, Linkedin, Mail, Code } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import * as THREE from 'three';
 
 const AnimatedShape = ({ mouse }) => {
   const meshRef = useRef();
@@ -138,7 +139,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.6 }}
             style={{ opacity }}
           >
-            <Canvas>
+            <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
               <ambientLight intensity={0.5} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <Suspense fallback={null}>
