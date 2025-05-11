@@ -32,90 +32,94 @@ const ProjectCard: React.FC<ProjectProps> = ({
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <div ref={ref} className="relative mb-20">
-      <div className="flex flex-col md:flex-row">
+    <motion.div 
+      ref={ref}
+      className="mb-32" 
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className={`md:grid md:grid-cols-12 items-center gap-6`}>
         {/* Project Image */}
-        <motion.div 
-          className={`w-full md:w-2/3 h-auto ${reverse ? 'md:order-2' : 'md:order-1'}`}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className={`md:col-span-7 ${reverse ? 'md:col-start-6 md:row-start-1' : 'md:col-start-1'}`}>
           <a 
             href={demoUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="group relative block w-full h-auto overflow-hidden rounded-lg"
+            className="block w-full overflow-hidden rounded-lg shadow-lg group"
           >
-            <div className="absolute inset-0 bg-navy-dark/80 group-hover:bg-navy-dark/30 transition-all duration-300 z-10"></div>
-            <img 
-              src={imageUrl} 
-              alt={title}
-              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+            <div className="relative">
+              <div className="absolute inset-0 bg-navy-dark/70 group-hover:bg-navy-dark/30 transition-all duration-300 z-10"></div>
+              <img 
+                src={imageUrl} 
+                alt={title}
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           </a>
-        </motion.div>
+        </div>
 
-        {/* Project Info Card */}
-        <motion.div 
-          className={`w-4/5 md:w-1/2 bg-navy-light p-6 rounded-lg shadow-lg 
-                    md:absolute ${reverse ? 'md:left-0' : 'md:right-0'} md:top-1/2 md:transform md:-translate-y-1/2 z-20`}
-          initial={{ opacity: 0, x: reverse ? -30 : 30 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: reverse ? -30 : 30 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="flex justify-between items-center mb-2">
-            <p className="text-slate-light text-sm font-mono">{timeline}</p>
+        {/* Project Content */}
+        <div className={`md:col-span-6 ${reverse ? 'md:col-start-1 md:row-start-1' : 'md:col-start-7'} mt-6 md:mt-0`}>
+          <div className="bg-navy-light p-5 rounded-lg shadow-lg">
+            <div className="flex justify-end mb-2">
+              <p className="text-slate-light text-sm font-mono">{timeline}</p>
+            </div>
+            
+            <h3 className="text-2xl font-semibold mb-4 text-foreground">
+              <a 
+                href={demoUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-teal transition-colors"
+              >
+                {title}
+              </a>
+            </h3>
+            
+            <div className="mb-4">
+              <p className="text-slate">{description}</p>
+            </div>
+            
+            <ul className="space-y-2 mb-4">
+              {details.map((detail, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-teal mr-2">▹</span>
+                  <span className="text-slate text-sm">{detail}</span>
+                </li>
+              ))}
+            </ul>
+            
+            <ul className="flex flex-wrap gap-2 mb-6 text-sm text-slate-light">
+              {technologies.map((tech) => (
+                <li key={tech} className="font-mono">{tech}</li>
+              ))}
+            </ul>
+            
+            <div className="flex gap-4">
+              <a 
+                href={githubUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label={`${title} GitHub repository`}
+              >
+                <Github size={20} />
+              </a>
+              <a 
+                href={demoUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-icon"
+                aria-label={`${title} live demo`}
+              >
+                <ExternalLink size={20} />
+              </a>
+            </div>
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-foreground text-left">
-            <a 
-              href={demoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-teal transition-colors"
-            >
-              {title}
-            </a>
-          </h3>
-          <div className="mb-4">
-            <p className="text-slate text-left">{description}</p>
-          </div>
-          <ul className="space-y-2 mb-4 text-left">
-            {details.map((detail, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-teal mr-2">▹</span>
-                <span className="text-slate text-sm">{detail}</span>
-              </li>
-            ))}
-          </ul>
-          <ul className="flex flex-wrap gap-2 mb-6 text-sm text-slate-light text-left">
-            {technologies.map((tech) => (
-              <li key={tech} className="font-mono">{tech}</li>
-            ))}
-          </ul>
-          <div className="flex gap-4">
-            <a 
-              href={githubUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-icon"
-              aria-label={`${title} GitHub repository`}
-            >
-              <Github size={20} />
-            </a>
-            <a 
-              href={demoUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-icon"
-              aria-label={`${title} live demo`}
-            >
-              <ExternalLink size={20} />
-            </a>
-          </div>
-        </motion.div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -174,33 +178,17 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="section" ref={sectionRef}>
+    <section id="projects" className="section py-16" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <SectionHeading title="Projects" />
 
-        <motion.div
-          className="space-y-24"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: { staggerChildren: 0.3 }
-            }
-          }}
-        >
+        <div className="mt-16 space-y-16">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-        >
+        <div className="text-center mt-16">
           <p className="text-slate mb-6">Interested in more of my projects?</p>
           <a
             href="https://github.com/kesharwaniyanshi"
@@ -212,7 +200,7 @@ const Projects: React.FC = () => {
               View GitHub
             </Button>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
