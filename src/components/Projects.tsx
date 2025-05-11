@@ -60,7 +60,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
       
       {/* Project Info */}
       <motion.div 
-        className={`col-span-6 ${reverse ? 'md:col-start-1 md:text-right' : 'md:col-start-7'} z-20`}
+        className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 text-left`}
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6 }}
@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
             <p className="text-teal font-mono text-sm">Featured Project</p>
             <p className="text-slate-light text-sm font-mono">{timeline}</p>
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-foreground">
+          <h3 className="text-2xl font-semibold mb-4 text-foreground text-left">
             <a 
               href={demoUrl} 
               target="_blank" 
@@ -81,22 +81,22 @@ const ProjectCard: React.FC<ProjectProps> = ({
             </a>
           </h3>
           <div className="mb-4">
-            <p className="text-slate">{description}</p>
+            <p className="text-slate text-left">{description}</p>
           </div>
-          <ul className="space-y-2 mb-4">
+          <ul className="space-y-2 mb-4 text-left">
             {details.map((detail, index) => (
-              <li key={index} className={`flex items-start ${reverse ? 'justify-end' : ''}`}>
+              <li key={index} className="flex items-start">
                 <span className="text-teal mr-2">▹</span>
                 <span className="text-slate text-sm">{detail}</span>
               </li>
             ))}
           </ul>
-          <ul className={`flex flex-wrap gap-2 mb-6 text-sm text-slate-light ${reverse ? 'justify-end' : ''}`}>
+          <ul className="flex flex-wrap gap-2 mb-6 text-sm text-slate-light text-left">
             {technologies.map((tech) => (
               <li key={tech} className="font-mono">{tech}</li>
             ))}
           </ul>
-          <div className={`flex gap-4 ${reverse ? 'justify-end' : ''}`}>
+          <div className="flex gap-4">
             <a 
               href={githubUrl} 
               target="_blank" 
@@ -140,7 +140,7 @@ const Projects: React.FC = () => {
       technologies: ["Next.js", "TailwindCSS", "PostgreSQL", "A* Algorithm", "RESTful APIs"],
       githubUrl: "https://github.com/kesharwaniyanshi/travelling-postman",
       demoUrl: "https://travelling-postman.vercel.app/",
-      imageUrl: "https://images.unsplash.com/photo-1526406915894-7bcd65f60845",
+      imageUrl: "/lovable-uploads/59e0b4c6-0a92-4933-a691-6ccad505c874.png",
       timeline: "March 2024 - May 2024"
     },
     {
@@ -154,7 +154,7 @@ const Projects: React.FC = () => {
       technologies: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB"],
       githubUrl: "https://github.com/kesharwaniyanshi/fusioncart",
       demoUrl: "https://fusion-cart-frontend.vercel.app/",
-      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      imageUrl: "/lovable-uploads/8417a850-0ff5-485c-b7cc-2304fdc9ab7f.png",
       timeline: "September 2024 - November 2024",
       reverse: true
     },
@@ -169,7 +169,7 @@ const Projects: React.FC = () => {
       technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"],
       githubUrl: "https://github.com/kesharwaniyanshi/getaway",
       demoUrl: "https://hotel-booking-site-frontend.vercel.app/",
-      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      imageUrl: "/lovable-uploads/c8eea761-70a3-4062-8536-6b425f484e63.png",
       timeline: "April 2024 - June 2024"
     }
   ];

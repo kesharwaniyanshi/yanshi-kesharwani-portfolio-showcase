@@ -35,19 +35,19 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <p className="text-slate mb-4">
-                Hello! I'm Yanshi Kesharwani, a third-year B.Tech student in Computer Science at IIIT Pune, driven by a deep passion for building impactful and user-focused digital experiences. I thrive at the intersection of full-stack web development and competitive programming, where I combine creative thinking with strong technical foundations to solve real-world problems.
+                Hello! I'm Yanshi Kesharwani, a third-year B.Tech student in Computer Science at <span className="highlight">IIIT Pune</span>, driven by a deep passion for building <span className="highlight">impactful and user-focused digital experiences</span>. I thrive at the intersection of <span className="highlight">full-stack web development</span> and <span className="highlight">competitive programming</span>, where I combine creative thinking with strong technical foundations to solve real-world problems.
               </p>
               
               <p className="text-slate mb-4">
-                I love crafting seamless, responsive interfaces and efficient backend systems—turning ideas into scalable applications. Beyond code, I'm a dedicated open-source contributor and enjoy collaborating on projects that challenge norms and push boundaries.
+                I love crafting <span className="highlight">seamless, responsive interfaces</span> and efficient backend systems—turning ideas into <span className="highlight">scalable applications</span>. Beyond code, I'm a dedicated <span className="highlight">open-source contributor</span> and enjoy collaborating on projects that challenge norms and push boundaries.
               </p>
               
               <p className="text-slate mb-4">
-                With a strong foundation in algorithms, system design, and modern development frameworks, I'm always looking to learn, evolve, and contribute meaningfully to innovative tech initiatives.
+                With a strong foundation in <span className="highlight">algorithms</span>, system design, and modern development frameworks, I'm always looking to learn, evolve, and contribute meaningfully to innovative tech initiatives.
               </p>
               
               <p className="text-slate">
-                Let's connect and build something awesome together!
+                Let's connect and build something <span className="highlight">awesome</span> together!
               </p>
             </motion.div>
             
