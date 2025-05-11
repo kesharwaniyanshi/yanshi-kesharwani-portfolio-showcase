@@ -1,4 +1,4 @@
-
+// ProjectCard.tsx (or wherever this file resides)
 import React, { useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import SectionHeading from './SectionHeading';
@@ -30,27 +30,14 @@ const ProjectCard: React.FC<ProjectProps> = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
-  
+
   return (
-    // <div 
-    //   ref={ref}
-    //   className={`relative md:grid md:grid-cols-12 gap-4 mb-20 ${reverse ? '' : ''}`}
-    // >
-    <div 
-  ref={ref}
-  className={`relative md:grid md:grid-cols-12 gap-4 mb-20 items-center`}
->
-
-      {/* Project Image */}
-{/*       <motion.div 
-        className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'}`} */}
-        <motion.div 
-  className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'} h-full`}
-
+    <div ref={ref} className={`relative md:grid md:grid-cols-12 gap-4 mb-20 items-center`}>
+      <motion.div 
+        className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'} h-full`}
         initial={{ opacity: 0, x: reverse ? -30 : 30 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: reverse ? -30 : 30 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+        transition={{ duration: 0.6, delay: 0.2 }}>
         <a 
           href={demoUrl} 
           target="_blank" 
@@ -65,23 +52,15 @@ const ProjectCard: React.FC<ProjectProps> = ({
           />
         </a>
       </motion.div>
-      
-     {/* Project Info - Make consistent for all projects including FusionCart */}
-// Old version:
-// <motion.div className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 text-left`}>
 
-<motion.div 
-  className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 h-full flex items-center`}
-  initial={{ opacity: 0, y: 30 }}
-  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-  transition={{ duration: 0.6 }}
->
-
-{/*         <div className={`bg-navy-light p-6 rounded-lg shadow-lg ${reverse ? 'md:float-right md:max-w-md' : 'md:max-w-md'}`}> */}
+      <motion.div 
+        className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 h-full flex items-center`}
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="bg-navy-light p-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
-
           <div className="flex justify-between items-center mb-2">
-{/*             <p className="text-teal font-mono text-sm">Featured Project</p> */}
             <p className="text-slate-light text-sm font-mono">{timeline}</p>
           </div>
           <h3 className="text-2xl font-semibold mb-4 text-foreground text-left">
@@ -139,7 +118,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
 const Projects: React.FC = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
-  
+
   const projects = [
     {
       title: "Travelling Postman",
@@ -155,7 +134,8 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/kesharwaniyanshi/travelling-postman",
       demoUrl: "https://travelling-postman.vercel.app/",
       imageUrl: "/lovable-uploads/59e0b4c6-0a92-4933-a691-6ccad505c874.png",
-      timeline: "March 2024 - May 2024"
+      timeline: "March 2024 - May 2024",
+      reverse: false
     },
     {
       title: "FusionCart",
@@ -184,7 +164,8 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/kesharwaniyanshi/getaway",
       demoUrl: "https://hotel-booking-site-frontend.vercel.app/",
       imageUrl: "/lovable-uploads/c8eea761-70a3-4062-8536-6b425f484e63.png",
-      timeline: "April 2024 - June 2024"
+      timeline: "April 2024 - June 2024",
+      reverse: false
     }
   ];
 
@@ -192,9 +173,7 @@ const Projects: React.FC = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
+      transition: { staggerChildren: 0.3 }
     }
   };
 
@@ -202,38 +181,33 @@ const Projects: React.FC = () => {
     <section id="projects" className="section" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <SectionHeading title="Projects" />
-        
-        <motion.div 
+
+        <motion.div
           className="space-y-24"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
         >
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={project.title} 
-              {...project}
-              reverse={index % 2 !== 0}
-            />
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.9 }}
         >
           <p className="text-slate mb-6">Interested in more of my projects?</p>
-          <a 
-            href="https://github.com/kesharwaniyanshi" 
-            target="_blank" 
+          <a
+            href="https://github.com/kesharwaniyanshi"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-block"
           >
             <Button variant="outline" className="border-teal text-teal hover:bg-teal/10">
-              View More on GitHub
-              <Github className="ml-2 h-4 w-4" />
+              View GitHub
             </Button>
           </a>
         </motion.div>
