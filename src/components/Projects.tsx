@@ -42,8 +42,11 @@ const ProjectCard: React.FC<ProjectProps> = ({
 >
 
       {/* Project Image */}
-      <motion.div 
-        className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'}`}
+{/*       <motion.div 
+        className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'}`} */}
+        <motion.div 
+  className={`col-span-7 ${reverse ? 'md:col-start-6' : 'md:col-start-1'} h-full`}
+
         initial={{ opacity: 0, x: reverse ? -30 : 30 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: reverse ? -30 : 30 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -64,8 +67,11 @@ const ProjectCard: React.FC<ProjectProps> = ({
       </motion.div>
       
       {/* Project Info - Make consistent for all projects including FusionCart */}
-      <motion.div 
-        className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 text-left`}
+      // <motion.div 
+      //   className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 text-left`}
+  <motion.div 
+  className={`col-span-6 ${reverse ? 'md:col-start-1' : 'md:col-start-7'} z-20 h-full flex items-center`}
+
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6 }}
@@ -74,7 +80,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         <div className="bg-navy-light p-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
 
           <div className="flex justify-between items-center mb-2">
-            <p className="text-teal font-mono text-sm">Featured Project</p>
+{/*             <p className="text-teal font-mono text-sm">Featured Project</p> */}
             <p className="text-slate-light text-sm font-mono">{timeline}</p>
           </div>
           <h3 className="text-2xl font-semibold mb-4 text-foreground text-left">
