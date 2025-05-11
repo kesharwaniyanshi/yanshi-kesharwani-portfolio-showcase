@@ -78,7 +78,7 @@ const Experience: React.FC = () => {
       title: "Communication & UI/UX Designer Intern",
       company: "Billboxa.ai",
       duration: "January 2025 - March 2025",
-      location: "Bengaluru, Karnataka",
+      location: "Remote",
       responsibilities: [
         "Designed high-quality web graphics using Figma, ensuring visual consistency across brand assets.",
         "Created WhatsApp user journeys and templates using Gupshup, streamlining customer communication flows.",

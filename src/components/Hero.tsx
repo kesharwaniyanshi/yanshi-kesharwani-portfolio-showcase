@@ -39,9 +39,9 @@ const Hero: React.FC = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center pt-16 pb-10" onMouseMove={handleMouseMove}>
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-12 gap-8 items-center">
           <motion.div 
-            className="max-w-4xl"
+            className="md:col-span-8 lg:col-span-7"
             style={{ opacity, y }}
           >
             <motion.p 
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
             </motion.p>
             
             <motion.h1 
-              className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 whitespace-nowrap overflow-hidden"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
             </motion.h1>
             
             <motion.h2 
-              className="text-3xl md:text-5xl lg:text-6xl font-semibold text-slate mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
           </motion.div>
 
           <motion.div 
-            className="hidden md:block h-[400px]" 
+            className="hidden md:block md:col-span-4 lg:col-span-5 h-[400px]" 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.6 }}
