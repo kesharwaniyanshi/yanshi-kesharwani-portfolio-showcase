@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
             className="block w-full overflow-hidden rounded-lg shadow-lg group"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-navy-dark/70 group-hover:bg-navy-dark/30 transition-all duration-300 z-10"></div>
+              <div className="absolute inset-0 bg-navy-dark/70 group-hover:bg-navy-dark/30 transition-all duration-300 "></div>
               <img 
                 src={imageUrl} 
                 alt={title}
