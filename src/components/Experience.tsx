@@ -74,16 +74,17 @@ const ExperienceCard: React.FC<ExperienceProps> = ({ title, company, duration, l
 
 const Experience: React.FC = () => {
   const experiences = [
-    {
-      title: "Communication & UI/UX Designer Intern",
-      company: "Billboxa.ai",
-      duration: "January 2025 - March 2025",
-      location: "Remote",
-      responsibilities: [
-        "Designed high-quality web graphics using Figma, ensuring visual consistency across brand assets.",
-        "Created WhatsApp user journeys and templates using Gupshup, streamlining customer communication flows.",
-        "Developed branded email templates with Canva for customer onboarding and promotions.",
-        "Collaborated with product teams to deliver conversion-optimized, visually appealing communication tools."
+  {
+    "title": "Software Development Intern",
+    "company": "Billbox AI Innovations Private Limited",
+    "duration": "January 2025 - June 2025",
+    "location": "Remote",
+    "responsibilities": [
+      "Designed high-quality web and communication assets using Figma and Canva, ensuring visual and brand consistency.",
+      "Created and optimized WhatsApp user journeys and templates using Gupshup to streamline customer onboarding and transaction flows.",
+      "Collaborated with product and design teams to develop visually engaging and conversion-focused communication tools.",
+      "Applied real-world software development and problem-solving skills in a dynamic, collaborative environment.",
+      "Assisted in creating and maintaining structured technical and design documentation to support team understanding and future scalability."
       ]
     },
     {
