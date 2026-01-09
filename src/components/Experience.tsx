@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
       title: "Software Development Engineer Intern",
       company: "Amazon",
       duration: "July 2025 - December 2025",
-      location: "Remote",
+      location: "Bangalore, Karnataka",
       responsibilities: [
         "Engineered comprehensive unit and integration test suites using Jest and backend testing frameworks, improving code coverage from 18% to 100% and ensuring end-to-end API reliability.",
         "Developed backend services and an intermediate Backend-for-Frontend (BFF) layer to migrate a legacy Horizonte-based system to a modern React.js and AWS AppSync architecture.",
@@ -56,7 +56,7 @@ const Experience: React.FC = () => {
     },
     {
       title: "Event Management Associate, Digital Marketing Associate, Social Media Assistant",
-      company: "E-Cell, IIIT Pune",
+      company: "E-Cell",
       duration: "March 2023 - May 2025",
       location: "Pune, Maharashtra",
       responsibilities: [
