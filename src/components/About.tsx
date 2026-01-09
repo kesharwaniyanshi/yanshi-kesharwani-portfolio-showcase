@@ -77,7 +77,7 @@ const About: React.FC = () => {
                       <div>
                         <h3 className="text-lg font-semibold text-foreground">B.Tech, CSE – IIIT Pune</h3>
                         <p className="text-slate-light text-sm">November 2022 – June 2026</p>
-                        <p className="text-teal mt-1">CGPA: 8.51</p>
+                        <p className="text-teal mt-1">CGPA: 8.72</p>
                       </div>
                     </div>
                   </CardContent>
