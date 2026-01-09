@@ -42,10 +42,10 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
-      <Skills />
-      <Projects />
-      <Achievements />
       <Experience />
+      <Projects />
+      <Skills />
+      <Achievements />
       <Contact />
       <Footer />
     </motion.div>
