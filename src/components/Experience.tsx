@@ -116,7 +116,7 @@ const Experience: React.FC = () => {
     {
       title: "Event Management Associate, Digital Marketing Associate, Social Media Assistant",
       company: "E-Cell, IIIT Pune",
-      duration: "March 2023 - Present",
+      duration: "March 2023 - May 2025",
       location: "Pune, Maharashtra",
       responsibilities: [
         "Managed event planning, on-site activities, and post-event evaluations to enhance future events.",
