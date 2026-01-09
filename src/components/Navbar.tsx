@@ -32,10 +32,10 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Achievements', href: '#achievements' },
     { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Achievements', href: '#achievements' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
             ))}
           </nav>
           <motion.a 
-            href="/yanshi_k.pdf" 
+            href="/Yanshi_Kesharwani.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="ml-5"
