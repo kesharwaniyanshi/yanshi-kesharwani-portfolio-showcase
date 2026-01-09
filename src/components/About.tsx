@@ -35,7 +35,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <p className="text-slate mb-4">
-                Hello! I'm Yanshi Kesharwani, a third-year B.Tech student in Computer Science at <span className="highlight">IIIT Pune</span>, driven by a deep passion for building <span className="highlight">impactful and user-focused digital experiences</span>. I thrive at the intersection of <span className="highlight">full-stack web development</span> and <span className="highlight">competitive programming</span>, where I combine creative thinking with strong technical foundations to solve real-world problems.
+                Hello! I'm Yanshi Kesharwani, a final-year B.Tech student in Computer Science at <span className="highlight">IIIT Pune</span>, driven by a deep passion for building <span className="highlight">impactful and user-focused digital experiences</span>. I thrive at the intersection of <span className="highlight">full-stack web development</span> and <span className="highlight">competitive programming</span>, where I combine creative thinking with strong technical foundations to solve real-world problems.
               </p>
               
               <p className="text-slate mb-4">
