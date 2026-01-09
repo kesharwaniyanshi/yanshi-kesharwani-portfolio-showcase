@@ -74,6 +74,20 @@ const ExperienceCard: React.FC<ExperienceProps> = ({ title, company, duration, l
 
 const Experience: React.FC = () => {
   const experiences = [
+    {
+  "title": "Software Development Engineer Intern",
+  "company": "Amazon",
+  "duration": "July 2025 - December 2025",
+  "location": "Bangalore, Karnataka",
+  "responsibilities": [
+    "Engineered comprehensive unit and integration test suites using Jest and backend testing frameworks, improving code coverage from 18% to 100% and ensuring end-to-end API reliability.",
+    "Developed backend services and an intermediate Backend-for-Frontend (BFF) layer to migrate a legacy Horizonte-based system to a modern React.js and AWS AppSync architecture.",
+    "Onboarded and integrated 8 APIs using AWS API Gateway and ECS, enabling seamless communication between frontend and backend systems.",
+    "Contributed to frontend feature integration in React.js as part of a legacy-to-modern architecture migration for a production-ready application.",
+    "Upgraded AWS Glue jobs from v2 to v4 using Scala and dependency updates, enhancing system reliability, performance, and maintainability.",
+    "Implemented fallback mechanisms, monitoring, and alerting for critical workflows to improve system observability and failure handling in production environments."
+  ]
+},
   {
     "title": "Software Development Intern",
     "company": "Billbox AI Innovations Private Limited",
@@ -87,6 +101,18 @@ const Experience: React.FC = () => {
       "Assisted in creating and maintaining structured technical and design documentation to support team understanding and future scalability."
       ]
     },
+      {
+  "title": "Open Source Contributor",
+  "company": "GirlScript Summer of Code (GSSoC) 2024",
+  "duration": "May 2024 - August 2024",
+  "location": "Remote",
+  "responsibilities": [
+    "Contributed to 3+ web applications with 9 successfully merged pull requests, improving user authentication, navigation, and overall usability.",
+    "Enhanced UI/UX by implementing accessible design practices, robust input validation, and user-centric features such as FAQs and contextual help buttons.",
+    "Collaborated with mentors and fellow contributors through code reviews and issue discussions to deliver clean, maintainable, and scalable solutions.",
+    "Focused on building intuitive, user-friendly experiences by translating feature requirements into well-structured frontend implementations."
+  ]
+},
     {
       title: "Event Management Associate, Digital Marketing Associate, Social Media Assistant",
       company: "E-Cell, IIIT Pune",
